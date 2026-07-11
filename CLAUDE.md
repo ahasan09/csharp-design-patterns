@@ -3,7 +3,7 @@
 Gang-of-Four (GoF) design patterns implemented in C# as a .NET solution.
 
 ## Tech Stack
-- C# / .NET Framework (legacy 4.x `.csproj`)
+- C# / .NET 8 (SDK-style `.csproj`, `net8.0`)
 - Visual Studio solution (.sln)
 
 ## Project Structure
@@ -16,10 +16,13 @@ GofPattern/
 
 ## Development
 ```bash
-# Build from CLI (MSBuild)
-msbuild GofPattern/<solution>.sln
+# Build from CLI
+dotnet build GofPattern/DesignPatterns.sln
+
+# Run a single pattern project
+dotnet run --project GofPattern/Singleton/
 ```
-Or open the `.sln` file in Visual Studio. Modern `dotnet build` will not work on these legacy `.csproj` files.
+Or open the `.sln` file in Visual Studio 2022+.
 
 ## Key Notes
 - Covers creational, structural, and behavioral GoF patterns.
